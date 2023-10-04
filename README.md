@@ -12,7 +12,6 @@ DISTRIB_DESCRIPTION="Ubuntu 22.04.3 LTS"
 
 confirmed at 2023.10.04
 ```
-- If you find this helpful, please consider giving it a "star"🌟 to support further improvements.
 
 
 ## Step 1: update the all packages, if necessary

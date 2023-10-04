@@ -12,30 +12,32 @@ DISTRIB_DESCRIPTION="Ubuntu 22.04.3 LTS"
 
 confirmed at 2023.10.04
 ```
+- If you find this helpful, please consider giving it a "star"🌟 to support further improvements.
 
-## update the all packages, if necessary
+
+## Step 1: update the all packages, if necessary
 ```
 # apt update
 # apt upgrade
 ```
 
-## download chrome stable package
+## Step 2: download chrome stable package
 ```bash
 # wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 
-## Install google-chrome
+## Step 3: Install google-chrome
 ```bash
 # dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
-## check installed chrome version
+## Step 4: check installed chrome version
 ```bash
 # google-chrome --version
 Google Chrome 117.0.5938.132
 ```
 
-## Install selenium, webdriver-manager
+## Step 5: Install selenium, webdriver-manager
 - https://pypi.org/project/webdriver-manager/
 
 ```bash
@@ -43,7 +45,7 @@ Google Chrome 117.0.5938.132
 # pip3 install webdriver-manager
 ```
 
-## create hello_world
+## Step 6: create hello_world
 1) Run with Chrome Headless
 ```bash
 # vim test.py
@@ -82,7 +84,7 @@ print(driver.title)
 driver.close()
 ``` 
 
-# run test.py and check chrome is available
+# Step 7: run test.py and check chrome is available
 ```
 # python test.py
 Welcome to Python.org
@@ -90,7 +92,7 @@ Welcome to Python.org
 
 # test's all/ enjoy it
 
-## FAQ
+## FAQ :)
 ### A.My VM is running in a cloud environment. In this case, how should I use Chrome?
 - In a cloud environment, people generally use Chrome in headless mode.
 - However, if your VM supports X-windows or display, you can also use GUI mode

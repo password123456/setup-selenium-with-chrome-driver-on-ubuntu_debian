@@ -3,6 +3,7 @@
 
 - Setting up and running Chrome and Selenium on the ubuntu or debian
 - The guide is based on ubuntu 22.04
+- LastModified: 2024.03.25
 ```
 # cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
@@ -175,3 +176,61 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 ```
 - For more details, refer to https://pypi.org/project/webdriver-manager/.
 
+## D. Chrome has been updated. Where can I download Chrome Driver and how do I install it?
+- As of March 25, 2024, the latest version of Chrome is 123.0.x.
+### (1) Go to the Chrome Driver Download page.
+- Download the Chrome Driver with the same version as your updated Chrome.
+- Click the link on the Chrome for Testing availability dashboard: https://chromedriver.chromium.org/downloads
+- https://googlechromelabs.github.io/chrome-for-testing/ to find the Chrome Driver matching your updated Chrome version.
+  
+### (2) Download the Chrome Driver.
+- Download the Chrome Driver version that matches your Chrome.
+- https://googlechromelabs.github.io/chrome-for-testing/
+```
+For Mac M1, download mac-arm64.
+- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.58/mac-arm64/chromedriver-mac-arm64.zip
+
+For General Linux distributions, download linux64.
+- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.58/linux64/chromedriver-linux64.zip
+```
+### (3) Install the Chrome Driver.
+- Since Chrome Driver is a binary file, there is no separate installation process.
+- Extract the zip archive and copy the chromedriver file to the directory where Chrome Driver should be located.
+
+For Mac, the default location for chromedriver is /usr/local/bin.
+```
+% sw_vers
+ProductName:    macOS
+ProductVersion:   13.0
+BuildVersion:   22A380
+
+% ls -al /usr/local/bin/chromedriver
+-rwxr-xr-x  1 root  wheel  17314928 Mar 25 13:23 /usr/local/bin/chromedriver
+```
+If you want to place it in a custom directory:
+- Place the 'chromedriver' file in your desired location. For example: '/Users/mymac/data/chromedrv/chromedriver'.
+
+### Example Usage in Python:
+
+```python
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+def chrome_webdriver():
+ chromedriver_path = '/Users/mymac/data/chromedrv/chromedriver'
+ user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) ' \
+              'Chrome/123.0.0.0 Safari/537.36'
+ options = webdriver.ChromeOptions()
+ options.add_argument("--start-maximized")
+ options.add_argument('--headless')
+ options.add_argument(f'user-agent={user_agent}')
+ service = Service(executable_path=chromedriver_path)
+ driver = webdriver.Chrome(service=service, options=options)
+ return driver
+
+url = 'http://www.google.com'
+driver = chrome_webdriver()
+driver.get(url)
+driver.implicitly_wait(10)
+print(driver.page_source)
+```

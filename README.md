@@ -30,6 +30,11 @@ confirmed at 2023.10.04
 # dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
+## (Optional) If you have a dependency problem after step 3, running the following command then try again step 3
+```bash
+# sudo apt -f install
+```
+
 ## Step 4: check installed chrome version
 ```bash
 # google-chrome --version

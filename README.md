@@ -3,15 +3,13 @@
 
 - Setting up and running Chrome and Selenium on the ubuntu or debian
 - The guide is based on ubuntu 22.04
-- LastModified: 2024.05.03
+- LastModified: June 4, 2024
 ```
 # cat /etc/lsb-release
 DISTRIB_ID=Ubuntu
 DISTRIB_RELEASE=22.04
 DISTRIB_CODENAME=jammy
 DISTRIB_DESCRIPTION="Ubuntu 22.04.3 LTS"
-
-confirmed at 2024.05.03
 ```
 
 ***
@@ -200,7 +198,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 - For more details, refer to https://pypi.org/project/webdriver-manager/.
 
 ### 4. google-chrome has been updated. Where can I download ChromeDriver and how do I install it?
-- As of March 25, 2024, the latest version of Chrome is 123.0.x.
+- June 4, 2024 the latest version of Chrome is "**125.0.6422.142**"
 
 #### 4.1. Go to the ChromeDriver Download page.
 - Download the Chrome Driver with the same version as your updated Chrome.
@@ -212,10 +210,10 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 - https://googlechromelabs.github.io/chrome-for-testing/
 ```
 For Mac M1, download mac-arm64.
-- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.58/mac-arm64/chromedriver-mac-arm64.zip
+- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/mac-arm64/chromedriver-mac-arm64.zip
 
 For General Linux distributions, download linux64.
-- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/123.0.6312.58/linux64/chromedriver-linux64.zip
+- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip
 ```
 #### 4.3. Install the ChromeDriver.
 - Since Chrome Driver is a binary file, there is no separate installation process.

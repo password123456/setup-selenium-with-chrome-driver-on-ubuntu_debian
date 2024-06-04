@@ -210,10 +210,10 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 - https://googlechromelabs.github.io/chrome-for-testing/
 ```
 For Mac M1, download mac-arm64.
-- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/mac-arm64/chromedriver-mac-arm64.zip
+- For Chrome version: https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/mac-arm64/chromedriver-mac-arm64.zip
 
 For General Linux distributions, download linux64.
-- For Chrome version 123: https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip
+- For Chrome version: https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip
 ```
 #### 4.3. Install the ChromeDriver.
 - Since Chrome Driver is a binary file, there is no separate installation process.

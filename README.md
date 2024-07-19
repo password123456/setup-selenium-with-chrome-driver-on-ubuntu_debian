@@ -48,12 +48,7 @@ DISTRIB_DESCRIPTION="Ubuntu 22.04.3 LTS"
 
 ## Step 3: Install 'google-chrome'
 ```bash
-# dpkg -i google-chrome-stable_current_amd64.deb
-```
-
-## (Optional) If you have a dependency problem after step 3, running the following command then try again step 3
-```bash
-# sudo apt -f install
+# apt-get install -y ./google-chrome-stable_current_amd64.deb
 ```
 
 ## Step 4: Check installed 'google-chrome' version

@@ -1,5 +1,5 @@
 # Setup selenium with chrome driver on ubuntu/debian
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fpassword123456%2Fsetup_selenium_with_chrome_driver_on_ubuntu_debian&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+[![Hits](https://hits.sh/github.com/password123456/setup-selenium-with-chrome-driver-on-ubuntu_debian.svg?view=today-total)](https://hits.sh/github.com/password123456/setup-selenium-with-chrome-driver-on-ubuntu_debian/)
 
 - Setting up and running Chrome and Selenium on the ubuntu or debian
 - The guide is based on ubuntu 22.04
